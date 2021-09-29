@@ -1,0 +1,6 @@
+requests==2.25.1
+pymongo==3.11.0
+python_telegram_bot==13.7
+modules==1.0.0
+PyJWT==2.1.0
+telegram==0.0.1
