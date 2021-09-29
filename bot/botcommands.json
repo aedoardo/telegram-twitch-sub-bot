@@ -1,0 +1,175 @@
+{
+  "availableCommandsChatBot": [
+    {
+      "name": "verifyAccount",
+      "desc": "Verifica il tuo account Twitch \uD83D\uDC9C",
+      "callback": "verifyaccount"
+    },
+    {
+      "name": "updateAccount",
+      "desc": "Aggiorna il tuo account Twitch \uD83D\uDD04",
+      "callback": "updateAccount"
+    },
+    {
+      "name": "start",
+      "desc": "Visualizza la lista dei comandi \u2699",
+      "callback": "start"
+    }
+  ],
+  "availableCommandsChatGroup": [
+	{
+      "name": "register",
+      "desc": "Registra il tuo gruppo su Twitcham",
+      "callback": "register_group"
+    },
+    {
+      "name": "renewLink",
+      "desc": "Aggiorna il link d'invito del gruppo",
+      "callback": "renew_link"
+    },
+    {
+      "name": "checkUsers",
+      "desc": "Controllo utenti nel gruppo",
+      "callback": "check_users"
+    },
+	{
+	  "name": "updateStatus",
+	  "desc": "Aggiorna stato gruppo",
+	  "callback": "update_access_to_group"
+	},
+	{
+      "name": "start",
+      "desc": "Visualizza la lista dei comandi \u2699",
+      "callback": "start"
+    }
+  ],
+  "userMenus": [
+	[
+		{
+			"text": "Gestione account",
+			"callback_data": "manage_user_data",
+			"need_submenu": true
+		},
+		
+		{
+			"text": "Entra in un gruppo",
+			"callback_data": "how_to_join",
+			"need_submenu": true
+		}
+	],
+  [
+	  {
+		  "text": "Altro",
+		  "callback_data": "manage_my_info",
+		  "need_submenu": true
+	  }
+  ]
+  ],
+  "groupMenus": [
+	[
+		{
+			"text": "Gestione gruppo",
+			"callback_data": "manage_group",
+			"need_submenu": true
+		},
+		{
+			"text": "Gestione utenti",
+			"callback_data": "manage_users",
+			"need_submenu": true
+		},
+		{
+			"text": "Controllo automatico",
+			"callback_data": "automatic_check",
+			"need_submenu": true
+		}
+	]
+  ],
+  "subMenus": {
+		"manage_group":	[
+							[
+								{
+									"text": "Registra il gruppo \u2714",
+									"callback_data": "register_group",
+									"need_submenu": false
+								},
+								{
+									"text": "Aggiorna link d'invito",
+									"callback_data": "renew_link",
+									"need_submenu": false
+								}
+							], 
+							[
+								{
+									"text": "Aggiorna lo stato del gruppo",
+									"callback_data": "update_access_to_group",
+									"need_submenu": false
+								}
+							]
+						],
+		"manage_users": [
+							[
+								{ 
+									"text": "Controllo abbonati",
+									"callback_data": "check_users",
+									"need_submenu": false
+								}
+							]
+		],
+		
+		"manage_user_data": [
+								[
+									{
+										"text": "Verifica il tuo account Twitch \uD83D\uDC9C",
+										"callback_data": "verifyaccount",
+										"need_submenu": false
+									}
+								]
+		],
+
+	  	"automatic_check": [
+			[
+				{
+					"text": "Attiva controllo automatico",
+					"callback_data": "set_automatic_check",
+					"need_submenu": false
+				}
+			]
+		],
+	  "manage_my_info": [
+		  [
+			  {
+				  "text": "Le mie informazioni",
+				  "callback_data": "get_my_info",
+				  "need_submenu": false
+			  },
+			  {
+				  "text": "Cambia account Twitch",
+				  "callback_data": "change_twitch_account",
+				  "need_submenu": false
+			  }
+		  ]
+	  ]
+	},
+  "startMessage": "Ciao, utilizza uno dei bottoni per svolgere un'azione.",
+  "verifyAccountMessage": "\u2B07 Verifica il tuo account cliccando il bottone qui sotto \u2B07",
+  "confirmIdentity": "\uD83C\uDD94 Conferma la tua identit\u00E0 \uD83C\uDD94",
+  "noSuperGroup": "Puoi eseguire questo comando solamente in un supergruppo. Rendendomi amministratore, il gruppo diventer\u00E0 automaticamente supergruppo.",
+  "needVerification": "Devi verificare il tuo account Twitch nella chat privata col bot.",
+  "successActivation": "Attivazione del gruppo eseguita con successo. Per sicurezza, ridigita il comando /help in modo da lavorare su un nuovo men\u00F9 !",
+  "successRenewLink": "Nuovo link d'invito!",
+  "noStreamerSimilarFounded": "Nessun streamer con l'username {} .",
+  "cantEnterNoSubscriber": "Non puoi entrare nel gruppo telegram di {} poich\u00E9 non sei un abbonato.",
+  "joinInGroup": "Entra nel gruppo {} di {}",
+  "clickToJoinInGroup": "Seleziona un gruppo qui sotto:",
+  "userIsAlreadyRegistered": "Gi\u00E0 hai verificato il tuo account Twitch!",
+  "copyInvitationLink": "\u2B07 Copia il nuovo link d'invito qui sotto! \u2B07",
+  "updateGroupStatusAvailable": "Stato del gruppo aggiornato con successo, adesso \u00E8 aperto!",
+  "updateGroupStatusNotAvailable": "Stato del gruppo aggiornato con successo, adesso \u00E8 chiuso!",
+  "goBackButtonText": "Torna indietro",
+  "similarStreamers": "Ecco una lista di streamer simili a {}! \n",
+  "howToJoin": "Per entrare nel gruppo di uno streamer digita il comando /join user dove user \u00E8 l'username dello streamer a cui sei abbonato.",
+  "noUserSpecified": "Per favore, specifica un username.",
+  "doLoginInWebsite": "Esegui l'accesso come streamer sul sito https://twitcham.com, premendo il bottone \"Login\". Nel caso in cui vedessi questo errore e tu fossi loggato, disconnettiti dal sito e ri-effettua l'accesso.",
+  "reachedMaxGroup": "Hai raggiunto il numero massimo di gruppi associabili.",
+  "automaticCheckSaved": "Hai attivato con successo il controllo automatico del gruppo."
+}
