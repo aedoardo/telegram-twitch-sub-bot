@@ -325,7 +325,7 @@ class SubChecker:
                     message += "" + ', '.join("[" + j[0] + "](tg://user?id=" + j[1] + ")" for j in
                                               users) + " è stato allontanato dal gruppo poiché non ha rinnovato il proprio abbonamento ⚠️ . \n \n "
 
-                url = "https://api.telegram.org/bot1296261373:AAH_O8Ufeffh4zTDqMsLs6fQLZnMydK2ty4/sendMessage?chat_id=" + str(
+                url = "https://api.telegram.org/botIdAndToken/sendMessage?chat_id=" + str(
                     group) + "&text=" + message + "&parse_mode=markdown"
                 r = self.do_request("get", url)
                 time.sleep(0.1)
@@ -334,10 +334,10 @@ class SubChecker:
 
     def bot_kick_user(self, telegram_id, group_id):
         try:
-            url = "https://api.telegram.org/bot1296261373:AAH_O8Ufeffh4zTDqMsLs6fQLZnMydK2ty4/kickChatMember?chat_id=" + str(
+            url = "https://api.telegram.org/botIdAndToken/kickChatMember?chat_id=" + str(
                 group_id) + "&user_id=" + str(telegram_id)
             r = self.do_request("get", url)
-            url = "https://api.telegram.org/bot1296261373:AAH_O8Ufeffh4zTDqMsLs6fQLZnMydK2ty4/unbanChatMember?chat_id=" + str(
+            url = "https://api.telegram.org/botIdAndToken/unbanChatMember?chat_id=" + str(
                 group_id) + "&user_id=" + str(telegram_id)
             r = self.do_request("get", url)
             time.sleep(0.1)
