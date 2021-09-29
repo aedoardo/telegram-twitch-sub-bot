@@ -22,3 +22,44 @@ I recommend to use some process manager like [pm2](https://pm2.keymetrics.io/) i
 
 
 Just run `python bot.py` and you will se your bot running. Run `python main.py` to run the auto checker.
+
+## Database table
+
+The database **IS NOT OPTIMIZED**. This is an example of data:
+```json
+{
+    "_id": {
+        "$oid": "5ff09030cd55d6d9f378d460"
+    },
+    "groups": ["list of groups id"],
+    "twitch_username": "user_twitch_username",
+    "twitch_id": "user_twitch_id",
+    "last_access_ts": 1632839210,
+    "last_access": "2021-9-28 15:26:50",
+    "telegram_id": "telegram_id as integer",
+    "verified_date": "2021-1-2 16:24:32",
+    "verified_ts": 1609601072,
+    "group_users": {
+        "chat_id": [{
+            "telegram_id": "telegram_id as integer",
+            "twitch_id": "twitch_id"
+        }],
+    },
+    "group_user": [],
+    "access_token": "access_token_twitch",
+    "refresh_token": "refresh_token_twitch",
+    "registered_access": "2021-1-2 16:24:42",
+    "invitationLink": "used only with single group and not multigroup",
+    "telegram_group_active": true,
+    "telegram_group_id": {
+        "group id": {
+            "invitationLink": "group invitation link",
+            "isActive": true,
+            "automaticCheck": true
+        },
+    },
+    "groups_users_to_kick": {}
+}
+```
+The `group_users` column is a column with all the groups registered by the user and each key as a value a list with all users' `twitch id` and `telegram id`.
+
