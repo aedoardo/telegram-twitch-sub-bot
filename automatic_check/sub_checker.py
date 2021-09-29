@@ -209,7 +209,7 @@ class SubChecker:
                             min_two_days) + " sono *scaduti* più di un giorno fa ⚠️ . \n \n _Fra meno di 48h sarete allontanati dal gruppo nel caso in cui non rinnovaste_."
 
                 try:
-                    url = "https://api.telegram.org/bot1296261373:AAH_O8Ufeffh4zTDqMsLs6fQLZnMydK2ty4/sendMessage?chat_id=" + str(
+                    url = "https://api.telegram.org/botIdAndToken/sendMessage?chat_id=" + str(
                         group) + "&text=" + message + "&parse_mode=markdown"
                     r = self.do_request("get", url)
                     time.sleep(0.1)
