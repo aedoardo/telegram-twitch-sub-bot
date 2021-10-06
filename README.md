@@ -63,3 +63,5 @@ The database **IS NOT OPTIMIZED**. This is an example of data:
 ```
 The `group_users` column is a column with all the groups registered by the user and each key as a value a list with all users' `twitch id` and `telegram id`.
 
+## Saving users in database
+As you can see, at [this](https://github.com/aedoardo/telegram-twitch-sub-bot/blob/0b126b3f1b14866f3ef41dfb056ad78be58f8a87/bot/commands.py#L603), there is a redirect to a page. In this case I pass the `telegram id` to that page and then I store it in the database. You can use any language to do that.
