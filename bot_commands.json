@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "5fa1bdaad588ae073045bc84"
+  },
+  "name": "help",
+  "filters": "",
+  "callback": "helpCommand",
+  "type": "command",
+  "async": true
+},{
+  "_id": {
+    "$oid": "5fa1c097d588ae073045bc85"
+  },
+  "name": "event.AddToGroup",
+  "filters": "status_update",
+  "callback": "added_to_group",
+  "type": "message"
+},{
+  "_id": {
+    "$oid": "5fa1c764d588ae073045bc86"
+  },
+  "name": "verifyAccount",
+  "filters": "",
+  "callback": "verify_account",
+  "type": "command",
+  "async": true
+},{
+  "_id": {
+    "$oid": "5fa1c990d588ae073045bc88"
+  },
+  "name": "register",
+  "filters": "",
+  "callback": "register_group",
+  "type": "command",
+  "async": true
+},{
+  "_id": {
+    "$oid": "5fa1c9c3d588ae073045bc89"
+  },
+  "name": "join",
+  "filters": "",
+  "callback": "join_command",
+  "type": "command",
+  "async": true
+},{
+  "_id": {
+    "$oid": "5fb169b88f1cf311443d20e9"
+  },
+  "name": "start",
+  "filters": "",
+  "callback": "start",
+  "type": "command",
+  "async": true
+},{
+  "_id": {
+    "$oid": "5fb176b68f1cf311443d20ea"
+  },
+  "name": "commandHandler.button",
+  "filters": "",
+  "callback": "manage_buttons",
+  "type": "buttonCommand",
+  "async": true
+},{
+  "_id": {
+    "$oid": "5fb2e4a0d5ce5736902515a2"
+  },
+  "name": "renewLink",
+  "filters": "",
+  "callback": "renew_invitation_link",
+  "type": "command",
+  "async": true
+},{
+  "_id": {
+    "$oid": "5fb8eae43923ff420c94de45"
+  },
+  "name": "searchStreamerToJoin",
+  "filters": "",
+  "callback": "search_streamer_to_join",
+  "type": "inlineQuery",
+  "async": true
+}]
